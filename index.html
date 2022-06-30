@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/app.js"></script>
+
+    <title>Gerenciador de Orçamentos</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  </head>
+  <body class="min-vh-100 d-flex flex-column">
+    <nav class="navbar navbar-inverse bg-secondary mb-4">
+      <div class="container-fluid size-limited">
+        <div class="navbar-header d-flex justify-content-between w-100">
+          <div>
+            <a class="navbar-brand" href="#">
+              <img
+                src="./assets/images/favicon.png"
+                alt="calculadora logo"
+                width="50px"
+              />
+            </a>
+            <span class="fs-6 fs-md-2 fw-bolder align-middle text-white"
+              >Gerenciador de Orçamentos</span
+            >
+          </div>
+          <div class="d-inline-flex dropstart">
+            <div class="d-flex justify-content-center dropdown">
+              <button
+                class="btn"
+                type="button"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  class="icon"
+                  src="./assets/icons/menu.svg"
+                  alt="menu icon"
+                />
+              </button>
+              <ul
+                class="dropdown-menu dropstart"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <li><a class="dropdown-item" href="#">Despesas</a></li>
+                <li><a class="dropdown-item" href="#">Recebimentos</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Usuários</a>
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex justify-content-center dropdown">
+              <button
+                class="btn"
+                type="button"
+                id="dropdownUserButton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  class="icon"
+                  src="./assets/icons/user.svg"
+                  alt="user icon"
+                />
+              </button>
+              <ul
+                class="dropdown-menu dropstart"
+                aria-labelledby="dropdownUserButton"
+              >
+                <li><a class="dropdown-item" href="#">Configurações</a></li>
+                <li><a class="dropdown-item" href="./login.html">Sair</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid size-limited">
+      <div class="row">
+        <div class="col-md-6 col-lg-8 mb-3">
+          <div
+            id="carouselSummaryControls"
+            class="carousel slide rounded-3 h-100"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselSummaryControls"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselSummaryControls"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active px-3 py-4">
+                <span class="fs-4 fw-bold">Últimas Despesas</span>
+                <table class="table table-striped mt-3 bg-light rounded-3">
+                  <thead>
+                    <tr>
+                      <th scope="col">Data</th>
+                      <th scope="col">Descrição</th>
+                      <th scope="col">Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Compra do mês</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Compra do mês</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Compra do mês</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Compra do mês</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Compra do mês</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Compra do mês</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="carousel-item px-3 py-4">
+                <span class="fs-4 fw-bold">Últimos Recebimentos</span>
+                <table class="table table-striped mt-3 bg-light rounded-3">
+                  <thead>
+                    <tr>
+                      <th scope="col">Data</th>
+                      <th scope="col">Descrição</th>
+                      <th scope="col">Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Verba</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Verba</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Verba</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Verba</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Verba</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                      <td>12/12/2021</td>
+                      <td>Verba</td>
+                      <td>R$ 100,00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-3" style="max-width: 540px">
+            <div class="row g-0 align-items-center px-3">
+              <div class="col-md-4 card-image-container">
+                <img
+                  src="./assets/images/expenses.webp"
+                  class="img-fluid rounded-start"
+                  alt="despesas"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Despesas</h5>
+                  <p class="card-text">
+                    Todas as suas despesas e um relatório detalhado sobre seus
+                    gastos em um só lugar!
+                  </p>
+                  <p class="card-text">
+                    <button type="button" class="btn btn-outline-secondary">
+                      Clique aqui para ver mais
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px">
+            <div class="row g-0 align-items-center px-3">
+              <div class="col-md-4 card-image-container">
+                <img
+                  src="./assets/images/savings.webp"
+                  class="img-fluid rounded-start"
+                  alt="economias"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Recebimentos</h5>
+                  <p class="card-text">
+                    Um relatório detalhado de todos os seus recebimentos e
+                    economias.
+                  </p>
+                  <p class="card-text">
+                    <button type="button" class="btn btn-outline-secondary">
+                      Clique aqui para ver mais
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 540px">
+            <div class="row g-0 align-items-center px-3">
+              <div class="col-md-4 card-image-container">
+                <img
+                  src="./assets/images/users.webp"
+                  class="img-fluid rounded-start"
+                  alt="usuários"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Usuários</h5>
+                  <p class="card-text">
+                    Gerencie usuários da aplicação, suas permissões e convites.
+                  </p>
+                  <p class="card-text">
+                    <button type="button" class="btn btn-outline-secondary">
+                      Clique aqui para ver mais
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+
+    <footer class="container-fluid flex-grow-1 bg-secondary">
+      <div class="d-flex justify-content-center">
+        <div class="container size-limited">
+          <div class="text-start">
+            <p class="fs-3 text-white fw-bolder">Gerenciador de Orçamentos</p>
+            <span class="fs-6 text-white">Paraíba, 8291 - Portão 9</span><br />
+            <span class="fs-6 text-white">Planalto, Maranguape - Ceará</span
+            ><br />
+            <span class="fs-6 text-white">64684-981</span><br />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

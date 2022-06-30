@@ -1,0 +1,37 @@
+footer {
+  padding: 25px;
+  max-height: 260px;
+}
+
+.carousel {
+  background-color: #6aeec6;
+}
+
+.form-container {
+  background-color: #6aeec6;
+}
+
+.size-limited {
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card-image-container {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.icon {
+  width: 35px;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel {
+    min-height: 450px;
+  }
+
+  #dropdownUserButton, #dropdownMenuButton {
+    padding: 0px;
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/app.js"></script>
+
+    <title>Gerenciador de Orçamentos</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  </head>
+  <body class="min-vh-100 d-flex flex-column justify-content-between">
+    <nav class="navbar navbar-inverse bg-secondary mb-4">
+      <div class="container-fluid size-limited">
+        <div class="navbar-header d-flex justify-content-between w-100">
+          <div>
+            <a class="navbar-brand" href="#">
+              <img
+                src="./assets/images/favicon.png"
+                alt="calculadora logo"
+                width="50px"
+              />
+            </a>
+            <span class="fs-6 fs-md-2 fw-bolder align-middle text-white"
+              >Gerenciador de Orçamentos</span
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="d-flex justify-content-center mb-5">
+      <div class="form-container size-limited m-3 m-md-0 px-3 py-2 px-md-5 py-md-4 rounded-3">
+        <span class="fs-5 fw-bolder"
+          >Confirme sua identidade antes de prosseguir</span
+        >
+        <form action="./index.html" method="POST" class="bg-light px-3 py-4 rounded-3 mt-3">
+          <div class="mb-3">
+            <label for="inputEmail1" class="form-label"
+              >Endereço de Email</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="inputEmail1"
+              aria-describedby="emailHelp"
+              required
+            />
+            <div id="emailHelp" class="form-text">
+              Suas informações pessoais estão seguras conosco.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="inputPassword1" class="form-label">Senha</label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword1"
+              required
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="check1"
+              required
+            />
+            <label class="form-check-label form-text" for="check1"
+              >Li e aceito os <a href="#">Termos de Uso</a> e a
+              <a href="#">Politica de Privacidade</a></label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+      </div>
+      <hr />
+    </div>
+
+    <footer class="container-fluid flex-grow-1 bg-secondary">
+      <div class="d-flex justify-content-center">
+        <div class="container size-limited">
+          <div class="text-start">
+            <p class="fs-3 text-white fw-bolder">Gerenciador de Orçamentos</p>
+            <span class="fs-6 text-white">Paraíba, 8291 - Portão 9</span><br />
+            <span class="fs-6 text-white">Planalto, Maranguape - Ceará</span
+            ><br />
+            <span class="fs-6 text-white">64684-981</span><br />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
